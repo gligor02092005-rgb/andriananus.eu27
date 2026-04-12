@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flori de Grădină | Grădina de Vis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #18391e;
+            --text-dark: #333;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); scroll-behavior: smooth; }
+        .title-font { font-family: 'Playfair Display', serif; color: var(--primary-green); }
+        .btn-primary { background-color: var(--primary-green); color: white; transition: all 0.3s ease; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        .cart-badge { background-color: #d4a373; }
+        .section-divider { border-bottom: 2px solid var(--primary-green); width: 60px; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <!-- Navigație Principală -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <a href="index.html"><h1 class="title-font text-2xl md:text-3xl">Grădina de Vis</h1></a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="camera.html" class="text-gray-600 hover:text-[#18391e] font-medium transition">Flori de Cameră</a>
+                    <a href="gradina.html" class="text-[#18391e] border-b-2 border-[#18391e] font-semibold">Flori de Grădină</a>
+                    <a href="index.html#ingrijire" class="text-gray-600 hover:text-[#18391e] font-medium transition">Accesorii Îngrijire</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="relative p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#18391e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="absolute top-0 right-0 cart-badge text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Secțiune - Sanctuarul din Grădină -->
+    <div class="bg-stone-100 py-16 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="title-font text-4xl md:text-6xl mb-4">Sanctuarul din Grădină</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto text-lg">Transformă-ți curtea într-un paradis colorat cu selecția noastră de flori rezistente, bulbi de sezon și arbuști ornamentali.</p>
+        </div>
+    </div>
+
+    <!-- Bara de Navigare Secțiune (Filtre) -->
+    <div class="sticky top-20 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#toate" class="px-6 py-2 rounded-full bg-[#18391e] text-white shadow-md text-sm font-semibold">Toate</a>
+                <a href="#perene" class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-[#18391e] hover:text-[#18391e] transition text-sm font-medium">Perene</a>
+                <a href="#bulbi" class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-[#18391e] hover:text-[#18391e] transition text-sm font-medium">Bulbi</a>
+                <a href="#arbusti" class="px-6 py-2 rounded-full bg-white text-gray-600 border border-gray-200 hover:border-[#18391e] hover:text-[#18391e] transition text-sm font-medium">Arbuști</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conținut principal -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+        
+        <!-- Secțiunea PERENE -->
+        <section id="perene" class="mb-20 scroll-mt-40">
+            <div class="mb-10">
+                <h2 class="title-font text-3xl">Plante Perene</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-500">Flori care revin an de an pentru a-ți înfrumuseța grădina.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Produs 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?auto=format&fit=crop&q=80&w=600" alt="Lavanda" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Lavandă Hidcote</h3>
+                        <p class="text-xs text-gray-400 mb-4">Rezistență ridicată la secetă.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">25 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1533038595180-f743988019e0?auto=format&fit=crop&q=80&w=600" alt="Bujori" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Bujor Sarah Bernhardt</h3>
+                        <p class="text-xs text-gray-400 mb-4">Flori mari, parfumate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">50 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1621274403197-30a5e9bb2587?auto=format&fit=crop&q=80&w=600" alt="Echinacea" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Echinacea Purpurea</h3>
+                        <p class="text-xs text-gray-400 mb-4">Atrage polenizatorii naturali.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">35 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1595350720448-f687449a071d?auto=format&fit=crop&q=80&w=600" alt="Salvie" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Salvie Ornamentală</h3>
+                        <p class="text-xs text-gray-400 mb-4">Albastru intens tot timpul verii.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">28 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea BULBI -->
+        <section id="bulbi" class="mb-20 scroll-mt-40">
+            <div class="mb-10">
+                <h2 class="title-font text-3xl">Bulbi de Sezon</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-500">Comori ascunse gata să explodeze în culori spectaculoase.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Produs 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1589123053646-322696616466?auto=format&fit=crop&q=80&w=600" alt="Lalele" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Mix Lalele Olandeze</h3>
+                        <p class="text-xs text-gray-400 mb-4">Pachet 10 bulbi, culori variate.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">30 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1522819116853-f437324bbd62?auto=format&fit=crop&q=80&w=600" alt="Narcise" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Narcise Galbene</h3>
+                        <p class="text-xs text-gray-400 mb-4">Vestitorii primăverii.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">22 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1533221216134-c330c6a2d02a?auto=format&fit=crop&q=80&w=600" alt="Zambile" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Zambile Violet</h3>
+                        <p class="text-xs text-gray-400 mb-4">Parfum inconfundabil.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">18 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1551893478-d726eaf0442c?auto=format&fit=crop&q=80&w=600" alt="Crini" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Crin Imperial Alb</h3>
+                        <p class="text-xs text-gray-400 mb-4">Eleganță supremă în grădină.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">40 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secțiunea ARBUSTI -->
+        <section id="arbusti" class="mb-20 scroll-mt-40">
+            <div class="mb-10">
+                <h2 class="title-font text-3xl">Arbuști Ornamentali</h2>
+                <div class="section-divider"></div>
+                <p class="text-gray-500">Structura și coloana vertebrală a oricărui design peisagistic.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Produs 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1554494528-6874002798e7?auto=format&fit=crop&q=80&w=600" alt="Trandafir" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Trandafir de Dulceață</h3>
+                        <p class="text-xs text-gray-400 mb-4">Soi rezistent, înflorire bogată.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">45 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1596273414110-410030139e3f?auto=format&fit=crop&q=80&w=600" alt="Hortensia" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Hortensia Roz</h3>
+                        <p class="text-xs text-gray-400 mb-4">Ideală pentru zone cu semi-umbră.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">55 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1550948390-6eb7fa773072?auto=format&fit=crop&q=80&w=600" alt="Iasomie" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Iasomie de Grădină</h3>
+                        <p class="text-xs text-gray-400 mb-4">Arbust cățărător foarte parfumat.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">40 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produs 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group border border-gray-100">
+                    <div class="overflow-hidden h-64">
+                        <img src="https://images.unsplash.com/photo-1463930644024-c116bb201ebc?auto=format&fit=crop&q=80&w=600" alt="Magnolie" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg mb-1">Magnolie Stellata</h3>
+                        <p class="text-xs text-gray-400 mb-4">Flori în formă de stea, albe.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#18391e] font-bold">165 RON</span>
+                            <button class="btn-primary px-4 py-2 rounded-lg text-xs">Adaugă</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="title-font text-2xl mb-4">Grădina de Vis</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Pasiunea noastră pentru plante se reflectă în calitatea fiecărui produs oferit.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Link-uri Rapide</h5>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li><a href="index.html" class="hover:text-[#18391e]">Acasă</a></li>
+                        <li><a href="camera.html" class="hover:text-[#18391e]">Flori Cameră</a></li>
+                        <li><a href="#" class="hover:text-[#18391e]">Livrare</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Contact</h5>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li>contact@gradinadevis.ro</li>
+                        <li>+40 722 000 000</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Newsletter</h5>
+                    <div class="flex">
+                        <input type="email" placeholder="Email" class="bg-gray-100 border-none rounded-l-lg px-3 py-2 text-xs w-full">
+                        <button class="btn-primary px-3 py-2 rounded-r-lg text-xs font-bold">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 text-center text-xs text-gray-400">
+                &copy; 2024 Grădina de Vis.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
