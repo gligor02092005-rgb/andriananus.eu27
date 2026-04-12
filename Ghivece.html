@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog Ghivece Ceramică | Grădina de Vis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #18391e;
+            --text-dark: #333;
+        }
+        body { font-family: 'Inter', sans-serif; color: var(--text-dark); background-color: #fafaf9; scroll-behavior: smooth; }
+        .title-font { font-family: 'Playfair Display', serif; color: var(--primary-green); }
+        .btn-primary { background-color: var(--primary-green); color: white; transition: all 0.3s ease; }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        .cart-badge { background-color: #d4a373; }
+        
+        .color-dot { width: 1.5rem; height: 1.5rem; border-radius: 9999px; border: 2px solid white; box-shadow: 0 0 0 1px #e5e7eb; cursor: pointer; transition: transform 0.2s; }
+        .color-dot:hover { transform: scale(1.2); }
+        .color-dot.active { box-shadow: 0 0 0 2px var(--primary-green); }
+        
+        .size-badge { font-size: 10px; border: 1px solid #e5e7eb; padding: 4px 8px; border-radius: 4px; cursor: pointer; transition: all 0.2s; }
+        .size-badge:hover { border-color: var(--primary-green); color: var(--primary-green); }
+    </style>
+</head>
+<body>
+
+    <!-- Navigație Principală (Identică cu Pagina Principală) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <h1 class="title-font text-2xl md:text-3xl">Grădina de Vis</h1>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="camera.html" class="text-gray-600 hover:text-[#18391e] font-medium transition">Flori de Cameră</a>
+                    <a href="gradina.html" class="text-gray-600 hover:text-[#18391e] font-medium transition">Flori de Grădină</a>
+                    <a href="index.html#ingrijire" class="text-[#18391e] font-semibold">Accesorii Îngrijire</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="relative p-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#18391e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span class="absolute top-0 right-0 cart-badge text-white text-[10px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Pagina -->
+    <header class="bg-stone-100 py-16 text-center border-b border-stone-200">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="title-font text-4xl md:text-5xl mb-4">Colecția de Ghivece Ceramică</h1>
+            <p class="text-gray-600 text-lg">Ghivece lucrate manual, arse la temperaturi înalte pentru durabilitate maximă. Disponibile în diverse forme geometrice și nuanțe naturale.</p>
+        </div>
+    </header>
+
+    <!-- Catalog Produse -->
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        
+        <!-- Secțiune: Forme Rotunde -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="title-font text-3xl">Forme Rotunde & Clasice</h2>
+                <div class="h-[1px] flex-grow bg-stone-200"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Produs 1 -->
+                <div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100 group">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-stone-200 relative">
+                        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800" alt="Ghiveci Rotund" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Rustic Terracotta</h3>
+                            <p class="text-gray-500 text-sm">Finisaj mat, poros.</p>
+                        </div>
+                        <span class="font-bold text-[#18391e]">35 RON</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex gap-2">
+                            <button class="color-dot bg-[#d4a373]" title="Terracotta"></button>
+                            <button class="color-dot bg-[#f5f5f4]" title="Alb Crem"></button>
+                            <button class="color-dot bg-[#44403c]" title="Maro Închis"></button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="size-badge">S (12cm)</button>
+                            <button class="size-badge">M (18cm)</button>
+                            <button class="size-badge">L (24cm)</button>
+                        </div>
+                        <button class="btn-primary w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-md hover:shadow-lg">Adaugă în Coș</button>
+                    </div>
+                </div>
+
+                <!-- Produs 2 -->
+                <div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100 group">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-stone-200 relative">
+                        <img src="https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?auto=format&fit=crop&q=80&w=800" alt="Ghiveci Bowl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Zen Bowl</h3>
+                            <p class="text-gray-500 text-sm">Ideal pentru suculente.</p>
+                        </div>
+                        <span class="font-bold text-[#18391e]">48 RON</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex gap-2">
+                            <button class="color-dot bg-[#cbd5e1]" title="Gri Marmură"></button>
+                            <button class="color-dot bg-[#1e293b]" title="Negru Mat"></button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="size-badge">M (20cm)</button>
+                            <button class="size-badge">L (30cm)</button>
+                        </div>
+                        <button class="btn-primary w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-md hover:shadow-lg">Adaugă în Coș</button>
+                    </div>
+                </div>
+
+                <!-- Produs 3 -->
+                <div class="bg-white p-4 rounded-3xl shadow-sm border border-stone-100 group">
+                    <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-stone-200 relative">
+                        <img src="https://images.unsplash.com/photo-1581014164536-11f8e65870b6?auto=format&fit=crop&q=80&w=800" alt="Ghiveci Lucios" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold">Glossy Elegance</h3>
+                            <p class="text-gray-500 text-sm">Efect smălțuit premium.</p>
+                        </div>
+                        <span class="font-bold text-[#18391e]">55 RON</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex gap-2">
+                            <button class="color-dot bg-[#fff]" title="Alb Lucios"></button>
+                            <button class="color-dot bg-[#166534]" title="Verde Smarald"></button>
+                            <button class="color-dot bg-[#be123c]" title="Roșu Regal"></button>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="size-badge">S</button>
+                            <button class="size-badge">M</button>
+                        </div>
+                        <button class="btn-primary w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-md hover:shadow-lg">Adaugă în Coș</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Secțiune: Forme Geometrice -->
+        <div class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="title-font text-3xl">Linii Moderne & Geometrice</h2>
+                <div class="h-[1px] flex-grow bg-stone-200"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Produs Geometric 1 -->
+                <div class="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 group transition hover:shadow-md">
+                    <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1516706562590-a8d01ae0d98f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2">Hexa-Cube Anthracite</h3>
+                        <p class="text-gray-500 text-sm mb-6">Un design minimalist perfect pentru birouri moderne.</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold">Preț unitar:</span>
+                                <span class="text-xl font-bold text-[#18391e]">85 RON</span>
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <button class="color-dot bg-[#334155]"></button>
+                                <button class="color-dot bg-[#64748b]"></button>
+                                <button class="color-dot bg-[#94a3b8]"></button>
+                            </div>
+                            <button class="btn-primary w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-sm">Cumpără Acum</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Produs Geometric 2 -->
+                <div class="flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-stone-100 group transition hover:shadow-md">
+                    <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+                        <img src="https://images.unsplash.com/photo-1534349735244-26958f24b17e?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="p-8 md:w-1/2 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold mb-2">Pyramid Flow</h3>
+                        <p class="text-gray-500 text-sm mb-6">Formă unică ce oferă stabilitate și un aspect vizual deosebit.</p>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm font-semibold">Preț unitar:</span>
+                                <span class="text-xl font-bold text-[#18391e]">72 RON</span>
+                            </div>
+                            <div class="flex gap-2 mb-4">
+                                <button class="color-dot bg-[#fef3c7]"></button>
+                                <button class="color-dot bg-[#d97706]"></button>
+                            </div>
+                            <button class="btn-primary w-full py-3 rounded-xl font-bold text-sm uppercase tracking-wider shadow-sm">Cumpără Acum</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Identic cu Pagina Principală) -->
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <h4 class="title-font text-2xl mb-4">Grădina de Vis</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Pasiunea noastră pentru plante se reflectă în calitatea fiecărui produs oferit. Îți aducem natura mai aproape, oriunde te-ai afla.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Link-uri Rapide</h5>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li><a href="index.html" class="hover:text-[#18391e]">Acasă</a></li>
+                        <li><a href="#" class="hover:text-[#18391e]">Livrare și Plată</a></li>
+                        <li><a href="#" class="hover:text-[#18391e]">Politica de Retur</a></li>
+                        <li><a href="#" class="hover:text-[#18391e]">Blog Grădinărit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Contact</h5>
+                    <ul class="text-sm space-y-2 text-gray-600">
+                        <li>Strada Florilor Nr. 10, București</li>
+                        <li>contact@gradinadevis.ro</li>
+                        <li>+40 722 000 000</li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold text-[#18391e] mb-4">Newsletter</h5>
+                    <p class="text-xs text-gray-500 mb-4">Abonează-te pentru sfaturi și oferte exclusive.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Emailul tău" class="bg-gray-100 border-none rounded-l-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-[#18391e]">
+                        <button class="btn-primary px-4 py-2 rounded-r-lg text-sm font-bold">OK</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-100 pt-8 text-center text-xs text-gray-400">
+                &copy; 2024 Grădina de Vis. Toate drepturile rezervate.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
